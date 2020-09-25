@@ -1,0 +1,20 @@
+{
+  "name": "federation-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Andrew Haines",
+    "email": "andrew@haines.org.nz"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/federation": "^0.20.4",
+    "@apollo/gateway": "^0.20.4",
+    "apollo-server": "^2.18.1",
+    "graphql": "^15.3.0"
+  },
+  "scripts": {
+    "query": "curl --silent --show-error --dump-header /dev/stderr --header 'Content-Type: application/json' --data '{ \"query\": \"query { foo bar }\" }' http://localhost:4000 | jq",
+    "start": "node index.js"
+  }
+}
